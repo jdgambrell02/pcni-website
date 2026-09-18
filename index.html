@@ -231,6 +231,44 @@
   footer.site .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
   footer.site a{color:#fff}
   footer.site .fbrand{font-family:"Fraunces";color:#fff;font-size:1.05rem}
+
+  /* ---------- News flash ---------- */
+  .news-flash{
+    background:var(--navy-deep);
+    color:#eaf1f4;
+    border-bottom:1px solid rgba(255,255,255,.1);
+  }
+  .news-flash .wrap{
+    display:flex;align-items:center;gap:16px;
+    padding:12px 24px;
+  }
+  .news-flash-label{
+    flex-shrink:0;
+    font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--clay-soft);
+    background:rgba(192,90,62,.18);
+    border:1px solid rgba(217,133,103,.35);
+    border-radius:999px;
+    padding:.35em .75em;
+  }
+  .news-flash-link{
+    flex:1;min-width:0;
+    display:block;
+    color:#fff;
+    font-weight:600;
+    font-size:.95rem;
+    text-decoration:underline;
+    text-underline-offset:3px;
+    text-decoration-color:rgba(255,255,255,.35);
+  }
+  .news-flash-link:hover,.news-flash-link:focus-visible{
+    color:var(--clay-soft);
+    text-decoration-color:var(--clay-soft);
+  }
+  @media(max-width:600px){
+    .news-flash .wrap{flex-direction:column;align-items:flex-start;gap:8px;padding:14px 24px}
+    .news-flash-link{font-size:.92rem}
+  }
 </style>
 </head>
 
@@ -246,6 +284,7 @@
       <a href="#mission">Mission</a>
       <a href="#programs">Programs</a>
       <a href="#impact">Impact</a>
+      <a href="in-the-news.html">In the News</a>
       <a href="#community">Community</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -255,6 +294,15 @@
     </button>
   </div>
 </header>
+
+<aside class="news-flash" role="region" aria-label="In the News">
+  <div class="wrap">
+    <span class="news-flash-label" id="news-flash-label">In the News</span>
+    <a class="news-flash-link" href="in-the-news.html#pcni-2026-community-impact" aria-labelledby="news-flash-label news-flash-text">
+      <span id="news-flash-text">August 11, 2026 — PCNI Announces $139,000 in 2026 Community Support. Read the press release.</span>
+    </a>
+  </div>
+</aside>
 
 <!-- ============ HERO ============ -->
 <main id="top">
